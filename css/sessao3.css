@@ -1,0 +1,21 @@
+.sessao3 {
+    background: linear-gradient(10deg,  #FFFFFF 60%, rgba(235, 37, 29, 1) 40%);
+    height: 90vh;
+}
+
+#sessao3_S1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
+.elento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*.elento:hover {
+    
+}*/
