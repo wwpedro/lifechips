@@ -7,23 +7,29 @@
 #sessao2_S1 {
     height: 100%; 
     display: flex;
-    flex-wrap: wrap;
-    
 }
   
 .row {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 20px); 
+    align-items: center;
     margin: 0 auto; 
 }
   
 .texto_produto{
-    flex: 0 0 calc(30% - 10px);
-    margin-bottom: 20px; 
     background-color: rgba(235, 37, 29, 1);
     color: white;
+    align-items: center;
+}
+
+#texto_prod{
+    flex: 0 0 calc(30% - 20px);
+    background-color: rgb(235, 37, 29, 1);
+    color: white;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
 }
   
 .img_prod img{
