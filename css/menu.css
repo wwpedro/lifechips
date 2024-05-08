@@ -26,6 +26,8 @@
     color: inherit;
     transition: color 0.3s, font-size 0.3s; 
     font-size: 1.2em;
+    color: rgb(179, 7, 0, 1);
+    font-family: PoppinB;
 }
 
 .nav-link:hover {

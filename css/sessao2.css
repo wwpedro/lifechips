@@ -1,4 +1,6 @@
 .sessao2 {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgba(235, 37, 29, 1);
@@ -7,34 +9,91 @@
 #sessao2_S1 {
     height: 100%; 
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
   
 .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
-    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 230px 300px 230px;
+    grid-template-rows: 200px 300px 200px;
 }
   
 .texto_produto{
-    background-color: rgba(235, 37, 29, 1);
     color: white;
     align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.texto_produto img{
+    align-items: center;
+    justify-content: center;
 }
 
 #texto_prod{
     flex: 0 0 calc(30% - 20px);
-    background-color: rgb(235, 37, 29, 1);
+    /*background-color: rgb(235, 37, 29, 1);*/
     color: white;
     align-items: center;
-    margin-left: 100px;
-    margin-right: 100px;
 }
   
-.img_prod img{
+#img_prod img{
     background-color: rgba(235, 37, 29, 1); 
     align-items: center;
+    justify-content: center;
+    display: flex;
     width: 250px;
 }
-  
+
+#img_prod_cima{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+}
+
+#img_prod_esquerda{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 160px;
+}
+
+#img_prod_baixo{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+#img_prod_direita{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#texto_prod_cima_esquerda{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: center;
+}
+#texto_prod_cima_direita{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    text-align: center;
+}
+#texto_prod_baixo_esquerda{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: center;
+    margin-top: -130px;
+}
+#texto_prod_baixo_diretita{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+}
