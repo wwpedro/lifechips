@@ -15,8 +15,8 @@
   
 .row {
     display: grid;
-    grid-template-columns: 230px 300px 230px;
-    grid-template-rows: 200px 300px 200px;
+    grid-template-columns: 230px 400px 230px;
+    grid-template-rows: 200px 400px 200px;
 }
   
 .texto_produto{
@@ -43,7 +43,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    width: 250px;
+    width: 350px;
 }
 
 #img_prod_cima{
@@ -57,7 +57,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    height: 160px;
+    height: 250px;
 }
 
 #img_prod_baixo{
