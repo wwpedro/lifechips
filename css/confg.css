@@ -10,14 +10,6 @@ html, body{
     font-family: Poppin;
 }
 
-.titulo_sessao{
-    padding-top: 3%;
-    text-align: center;
-    color: #ffffff;
-    font-size: 2.7rem;
-    font-family: Potato;
-}
-
 @font-face {
     font-family: Poppin;
     src: url(../assets/fonts/Poppins-Regular.ttf);

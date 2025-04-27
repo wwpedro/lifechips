@@ -5,143 +5,277 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/all.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <title>Document</title>
 </head>
 
 <body>
   <header>
-    <div id="menu">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#inicio">Página inicial</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#sobre">Sobre</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#servico">Serviços</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contato">Contato</a>
-        </li>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#home">home</a></li>
+        <li><a href="#produto">produto</a></li>
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#contato">contato</a></li>
       </ul>
-    </div>
+    </nav>
   </header>
-  <section>
 
-  </section>
-  <section class="sessao1" id="inicio">
-    <div id="sessa1_esquerda">
-      <div id="texto_S1">
-        Felicidade em cada mordida.
-      </div>
-      <div class="button">
-        nos contrate
-      </div>
+  <section class="hero" id="home" data-aos="fade-up">
+    <div class="hero-text" data-aos="fade-right">
+      <h1>Felicidade<br>em cada<br>mordida.</h1>
+      <button>Compre com a gente</button>
     </div>
-    <div id="sessa1_direita">
-      <img src="assets/logo_vermelha.png" alt="Logo da empresa Life Chips">
-      <div id="batata"><img src="assets/chips.png" alt=""></div>
+    <div class="hero-image" data-aos="fade-left">
+      <img src="assets/logo_vermelha.png" alt="Life Chips Logo" class="logo">
+      <img src="assets/chips.png" alt="Batatas" class="chips">
     </div>
   </section>
-  <section class="sessao2" id="servico">
-    <div class="titulo_sessao">
-      <h1>Produto</h1>
-    </div>
-    <div class="row">
-      <div class="texto_produto" id="texto_prod_cima_esquerda">As batatas são uma fonte de carboidratos, que são a principal fonte de energia para o corpo. Portanto, as batatas fritas podem fornecer um impulso rápido de energia.</div>
-      <div class="texto_produto" id="img_prod_cima"><img src="assets/cima.png" alt="" style="width: 100px;"></div>
-      <div class="texto_produto" id="texto_prod_cima_direita">As batatas contêm fibra, que é importante para a saúde digestiva e pode ajudar a manter a saciedade.</div>
-      <div class="texto_produto" id="img_prod_esquerda"><img src="assets/esquerda.png" alt="" style="width: 100px;"></div>
-      <div class="texto_produto" id="img_prod"><img src="assets/produto_1.png" alt="imagem produto batata" ></div>
-      <div class="texto_produto" id="img_prod_direita"><img src="assets/direita.png" alt="" style="width: 100px;"></div>
-      <div class="texto_produto" id="texto_prod_baixo_esquerda">As batatas contêm vitamina C e potássio, que são nutrientes essenciais para o sistema imunológico e a saúde cardiovascular, respectivamente. No entanto, o processo de fritura pode reduzir a quantidade de vitamina C</div>
-      <div class="texto_produto" id="img_prod_baixo"><img src="assets/baixo.png" alt="" style="width: 100px;"></div>
-      <div class="texto_produto" id="texto_prod_baixo_diretita">As batatas fritas comerciais muitas vezes contêm altas quantidades de sal e aditivos para melhorar o sabor e prolongar a vida útil.</div>
+
+
+  <section class="produto" id="produto" data-aos="fade-up">
+    <h2 class="produto-titulo">PRODUTO</h2>
+
+    <div class="carrossel-container">
+      <button class="seta esquerda" onclick="trocarSlide(-1)">◀</button>
+
+      <div class="grade-produto">
+        <!-- Linha 1 -->
+        <div class="texto topo-esquerda">As batatas são uma fonte de carboidratos, que são a principal fonte de energia
+          para o corpo. Portanto, as batatas fritas podem fornecer um impulso rápido de energia.</div>
+        <img src="assets/cima.png" class="seta-img seta-topo-esquerda" alt="Seta para cima">
+
+
+        <div class="texto topo-direita">As batatas contêm fibra, que é importante para a saúde digestiva e pode ajudar a
+          manter a saciedade.</div>
+
+        <!-- Linha 2 (Produto ao centro) -->
+        <div></div>
+        <div class="texto baixo-esquerda">As batatas fritas comerciais muitas vezes contêm altas quantidades de sal e
+          aditivos para melhorar o sabor e prolongar a vida útil.</div>
+        <div class="meio-esquerda"><img src="assets/esquerda.png" class="seta-img seta-baixo-esquerda"
+            alt="Seta para direita"></div>
+        <div class="produto-imagem">
+          <img src="assets/produto_1.png" alt="Pacote Life Chips">
+        </div>
+        <div class="meio-direita">
+          <img src="assets/direita.png" class="seta-img seta-topo-direita" alt="Seta para cima">
+        </div>
+
+        <!-- Linha 3 -->
+
+        <div></div> <!-- Espaço vazio -->
+        <div class="texto baixo-direita">As batatas contêm vitamina C e potássio, que são nutrientes essenciais para o
+          sistema imunológico e a saúde cardiovascular. No entanto, o processo de fritura pode reduzir a quantidade de
+          vitamina C.</div> <!-- Espaço vazio -->
+        <img src="assets/baixo.png" class="seta-img seta-baixo-direita" alt="Seta para direita">
+      </div>
+
+      <button class="seta direita" onclick="trocarSlide(1)">▶</button>
     </div>
   </section>
-  <section class="sessao3">
-    <div class="titulo_sessao">
-      <h1>Vantagens</h1>
+
+
+
+
+  <section class="vantagens" id="vantagens" data-aos="fade-up">
+    <h2 class="vantagens-titulo">VANTAGENS</h2>
+
+    <div class="vantagem-item" data-aos="fade-right">
+      <img src="assets/chef.png" alt="Imagem Artesanal" class="vantagem-img">
+      <div class="vantagem-texto">
+        <h3>ARTESANAL</h3>
+        <p>As batatas fritas comerciais muitas vezes contêm altas quantidades de sal e aditivos para melhorar o sabor e
+          prolongar a vida útil.</p>
+      </div>
     </div>
-    <div id="sessao3_S1">
-      <div class="elemento_e">
-        <div class="imagem_e">
-          <img src="assets/chef.png" alt="">
-        </div>
-        <div class="titulo_S1_e">
-          <h2>Artesanal</h2>
-          <br>
-          <p>Lorem ipsum dolor sit amet. Qui ipsum eligendi sit fugit placeat qui quas nemo eum odit autem aut dolorum Quis ut dolorem aperiam ut repellat dolor. Et quos asperiores est consectetur galisum est quae aliquid qui quis porro in enim sequi ad quia velit. Sit quisquam deleniti ut minima dicta est corrupti sequi et doloremque officia aut possimus illum qui corrupti quos sit odio perspiciatis.</p>
-        </div>
+
+    <div class="vantagem-item" data-aos="fade-left">
+      <div class="vantagem-texto">
+        <h3>ESPECIAL</h3>
+        <p>As batatas fritas comerciais muitas vezes contêm altas quantidades de sal e aditivos para melhorar o sabor e
+          prolongar a vida útil.</p>
       </div>
-      <div class="elemento_d">
-        <div class="imagem_d">
-          <img src="assets/chips.png" alt="">
-        </div>
-        <div class="titulo_S1_d">
-          <h2>Saudavel</h2>
-          <br>
-          <p>Lorem ipsum dolor sit amet. Qui ipsum eligendi sit fugit placeat qui quas nemo eum odit autem aut dolorum Quis ut dolorem aperiam ut repellat dolor. Et quos asperiores est consectetur galisum est quae aliquid qui quis porro in enim sequi ad quia velit. Sit quisquam deleniti ut minima dicta est corrupti sequi et doloremque officia aut possimus illum qui corrupti quos sit odio perspiciatis.</p>
-        </div>
-      </div>
+      <img src="assets/batata.png" alt="Imagem Especial" class="vantagem-img">
     </div>
   </section>
-  <section class="sessao4">
-    <div class="titulo_sessao">
-      <h1>vai bem com lifechips</h1>
-    </div>
-    <div id="card_4">
-      <div id="img_4">
-        <img src="assets/abacate.png" alt="">
-      </div>
-      <div class="titulo_4">
-        Molho de Abacate com Limão
-      </div>
-      <div class="ingredientes">
-        <h2>Ingrediente:</h2>
-        <ul>
-          <li>1 abacate maduro</li>
-          <li>suco de 1 limão</li>
-          <li>2 colheres de sopa de coentro picado</li>
-          <li>sal e pimenta a gosto.</li>
-        </ul>
-      </div>
-      <div class="linha4">
-        <div class="preparo">
-          Modo de preparo: Amasse o abacate em uma tigela e misture com o suco de limão e o coentro picado. Tempere com sal e pimenta a gosto. Misture bem até obter uma consistência cremosa. Sirva com os chips de batata.
+
+
+  <section class="receitas" id="receitas" data-aos="fade-up">
+    <h2 class="receitas-titulo">VAI BEM COM<br> LIFECHIPS</h2>
+
+    <div class="receitas-container" data-aos="zoom-in">
+      <button class="seta seta-esquerda" onclick="trocarReceita(-1)">&#9664;</button>
+
+      <div class="card-receita">
+        <img src="assets/abacate.png" alt="Imagem de abacate" class="imagem-topo">
+
+        <div class="conteudo-receita">
+          <h3>Molho de Abacate com Limão</h3>
+
+          <div class="ingredientes">
+            <strong>Ingredientes:</strong>
+            <p>1 abacate maduro<br>
+              suco de 1 limão<br>
+              2 colheres de sopa de coentro picado<br>
+              sal e pimenta a gosto.</p>
+          </div>
+
+          <div class="modo-preparo">
+            <div class="texto-preparo">
+              <strong>Modo de preparo:</strong>
+              <p>Amassar o abacate em uma tigela e misturar com o suco de limão e o coentro picado. Temperar com sal e
+                pimenta a gosto. Misturar bem até obter uma consistência cremosa. Servir com os chips de batata.</p>
+            </div>
+            <img src="assets/molhoAbacate.png" alt="Imagem Guacamole" class="imagem-preparo">
+          </div>
         </div>
-        <div class="imagemlud"><img src="assets/molhoAbacate.png" alt=""></div>
       </div>
+
+      <button class="seta seta-direita" onclick="trocarReceita(1)">&#9654;</button>
     </div>
   </section>
-  <section class="sessao5" id="sobre">
-    <div id="card_5">
-      <div id="titulo_card_5">
-        <img src="assets/logo_titulo_branca.png" alt="">
-      </div>
-      <div id="texto_card_5">
-        A Lifechips é uma empresa que busca oferecer produtos saborosos e saudáveis, produzidos de forma artesanal 
-        com ingredientes de alta qualidade. O foco é oferecer aos consumidores uma opção de lanche prático e rápido, sem 
+
+
+
+  <section class="sobre" id="sobre" data-aos="fade-up">
+    <div class="card-sobre" data-aos="zoom-in">
+      <img src="assets/logo_vermelha.png" alt="Logo LifeChips" class="logo-sobre">
+
+      <p class="texto-sobre">
+        A Lifechips é uma empresa que busca oferecer produtos saborosos e saudáveis, produzidos de forma artesanal com
+        ingredientes de alta qualidade. O foco é oferecer aos consumidores uma opção de lanche prático e rápido, sem
         abrir mão do sabor e da qualidade.
-        saudáveis, produzidos de forma artesanal 
-        com ingredientes de alta qualidade. O foco é oferecer aos consumidores uma opção de lanche prático
+      </p>
+    </div>
+  </section>
+
+
+  <section class="contato" id="contato" data-aos="fade-up">
+    <h2 class="contato-titulo">FALE CONOSCO</h2>
+
+    <div class="contato-icones" data-aos="fade-up">
+      <div class="icone-item">
+        <img src="assets/instagram.png" alt="Instagram">
+        <p>@instagram</p>
+      </div>
+      <div class="icone-item">
+        <img src="assets/gmail.png" alt="Email">
+        <p><a href="mailto:email@gmail.com">email@gmail.com</a></p>
+      </div>
+      <div class="icone-item">
+        <img src="assets/wpp.png" alt="Whatsapp">
+        <p>(82) 900000000</p>
       </div>
     </div>
-  </section>
-  <section class="sessao6" id="contato">
-    <div class="titulo_sessao">
-      <h1>Contatos</h1>
-    </div>
-    <div id="card_6">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="">
-      <img src="https://static.vecteezy.com/system/resources/thumbnails/021/495/979/small/whatsapp-social-media-logo-icon-free-png.png" alt="">
-      <a href="https://www.doritos.com"><img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt=""></a>
-    </div>
-  </section>
-  <footer>
 
+    <a href="https://api.whatsapp.com/send?phone=5582900000000" class="botao-whatsapp" target="_blank">
+      fale com a gente
+    </a>
+  </section>
+
+  <footer class="rodape">
+    <p>© 2024 LifeChips. Todos os direitos reservados.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> <!-- animações -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+
+    // FECHAR AUTOMATICAMENTE AO CLICAR EM UM LINK
+    document.addEventListener('DOMContentLoaded', function () {
+      const links = document.querySelectorAll('#nav-links a');
+      links.forEach(function (link) {
+        link.addEventListener('click', function () {
+          const navLinks = document.getElementById('nav-links');
+          navLinks.classList.remove('show');
+        });
+      });
+    });
+  </script> <!-- hamburguer -->
+  <script>
+    const receitas = [
+      {
+        imagemTopo: 'assets/abacate.png',
+        titulo: 'Molho de Abacate com Limão',
+        ingredientes: '1 abacate maduro<br>suco de 1 limão<br>2 colheres de sopa de coentro picado<br>sal e pimenta a gosto.',
+        preparo: 'Amassar o abacate em uma tigela e misturar com o suco de limão e o coentro picado. Temperar com sal e pimenta a gosto. Misturar bem até obter uma consistência cremosa. Servir com os chips de batata.',
+        imagemPreparo: 'assets/molhoAbacate.png'
+      },
+      // Você pode adicionar mais receitas aqui
+    ];
+
+    let receitaAtual = 0;
+
+    function mostrarReceita() {
+      const receita = receitas[receitaAtual];
+      document.querySelector('.imagem-topo').src = receita.imagemTopo;
+      document.querySelector('.conteudo-receita h3').innerHTML = receita.titulo;
+      document.querySelector('.ingredientes p').innerHTML = receita.ingredientes;
+      document.querySelector('.modo-preparo p').innerHTML = receita.preparo;
+      document.querySelector('.imagem-preparo').src = receita.imagemPreparo;
+    }
+
+    function trocarReceita(direcao) {
+      receitaAtual += direcao;
+      if (receitaAtual < 0) receitaAtual = receitas.length - 1;
+      if (receitaAtual >= receitas.length) receitaAtual = 0;
+      mostrarReceita();
+    }
+
+    // Esconde setas se só tiver uma receita
+    window.addEventListener('DOMContentLoaded', () => {
+      if (receitas.length <= 1) {
+        document.querySelector('.seta-esquerda').style.display = 'none';
+        document.querySelector('.seta-direita').style.display = 'none';
+      }
+      mostrarReceita();
+    });
+  </script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+  <script>
+    const produtos = [
+      // aqui viria cada produto
+      {
+        imagem: 'assets/produto_1.png',
+        textos: [
+          "Texto 1: energia",
+          "Texto 2: saciedade",
+          "Texto 3: vitamina C e potássio",
+          "Texto 4: sódio e conservantes"
+        ]
+      }
+    ];
+
+    function verificarSetas() {
+      const esquerda = document.querySelector('.seta.esquerda');
+      const direita = document.querySelector('.seta.direita');
+      if (produtos.length <= 1) {
+        esquerda.style.display = 'none';
+        direita.style.display = 'none';
+      } else {
+        esquerda.style.display = 'flex';
+        direita.style.display = 'flex';
+      }
+    }
+
+    // Executa quando carregar
+    document.addEventListener('DOMContentLoaded', verificarSetas);
+  </script>
+
 </body>
 
 </html>

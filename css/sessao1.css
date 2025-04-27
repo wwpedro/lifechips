@@ -1,75 +1,101 @@
-.sessao1 {
-    height: 90vh;
-    display: flex;
-}
 
-#sessa1_esquerda {
-    width: 60%;
-    height: 100%;
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 5% 10px;
+    min-height: 100vh;
+    text-align: center;
+  }
+
+  .hero-text {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    color: #d90000;
+    font-weight: bold;
     font-family: PoppinB;
-}
-#sessa1_direita {
-    width: 40%;
-    height: 100%;
-}
-#sessa1_esquerda {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+  }
 
-#sessa1_direita {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-#sessa1_direita img{
-    align-items: start;
-    margin-right: 40%;
-    position: static;
-}
-
-#batata{
-    margin-top: -120px;
-    margin-right: 400px;
-
-}
-
-#batata img{
-    width: 250px;
-    z-index: 2;
-    justify-content: flex-start;
-}
-
-#texto_S1 {
-    font-size: 3.5rem;
-    text-align: center;
-    margin-top: 5%;
-    width: 40%;
-    color: #FF0000;
-}
-
-.button {
-    background-color: #FF0000; 
-    color: #FFFFFF; 
-    border-radius: 10px; 
-    padding: 20px 30px; 
-    transition: background-color 0.3s, transform 0.3s; 
+  .hero-text button {
+    background-color: #d90000;
+    color: #fff;
+    font-weight: bold;
+    padding: 14px 28px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
     cursor: pointer;
-    margin-top: 1rem;
-    width: 280px;
-    text-align: center;
-    font-size: 20px;
-}
+    transition: background-color 0.3s ease;
+  }
 
-.button:hover {
-    background-color: #972020; 
-    
-}
+  .hero-text button:hover {
+    background-color: #b00000;
+  }
 
-.button:active {
-    transform: scale(1.05); 
-}
+  .hero-image {
+    flex: 1;
+    max-width: 400px;
+    position: relative;
+  }
+
+  .hero-image img.logo {
+    width: 100%;
+    display: block;
+  }
+
+  .hero-image img.chips {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+  }
+
+    @media (max-width: 768px) {
+        .hero {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding-top: 100px;
+          height: auto;         /* <-- ESSENCIAL */
+            min-height: 600px; 
+        }
+      
+        .hero-image {
+          order: 1;
+          max-width: 180px;
+          margin-bottom: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .hero-image img.logo {
+          width: 100%;
+          margin-bottom: 0;
+        }
+      
+        .hero-image img.chips {
+          width: 80px;
+          right: 0;
+          bottom: 90px;
+        }
+      
+        .hero-text {
+          order: 2;
+          margin-top: -50px; /* cola o texto na imagem */
+        }
+      
+        .hero-text h1 {
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+        }
+
+      
+  }

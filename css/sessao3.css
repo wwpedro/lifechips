@@ -1,91 +1,64 @@
-.sessao3 {
-    height: 105%;
-    background: red;
-}
-
-#sessao3_S1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-    display: flex;
-}
-.elemento_e {
-    margin-left: 4%;
-    margin-right: 4%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 90%; 
-    height: 300px; 
-    border-radius: 10px; 
-    transition: width 0.5s ease, height 0.5s ease;
-}
-.elemento_d {
-    margin-left: 4%;
-    margin-right: 4%;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    width: 90%; 
-    height: 300px; 
-    border-radius: 10px; 
-    transition: width 0.5s ease, height 0.5s ease;
-}
-.imagem_e{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.imagem_d{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.imagem_e img{
-    width: 50%;
-    margin-left: 10%;
-}
-.imagem_d img{
-    width: 50%;
-    margin-right: 10%;
-}
-
-.titulo_S1_e{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    font-family: potato;
+.vantagens {
+    background-color: #e42320;
     color: white;
-    width: 40%;
-    height: 100%;
-}
-
-.titulo_S1_d {
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .vantagens-titulo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+    font-family: Potato;
+  }
+  
+  .vantagem-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+  
+  .vantagem-img {
+    max-width: 250px;
+    height: auto;
+  }
+  
+  .vantagem-texto {
+    max-width: 400px;
     text-align: center;
-    font-family: potato;
-    color: white;
-    width: 40%;
-    height: 100%;
-}
-
-.titulo_S1_e p{
-    font-family: Poppin;
-}
-.titulo_S1_d p{
-    font-family: Poppin;
-}
-
-.titulo_S1_e h2{
-    font-size: 2.5rem;
-}
-.titulo_S1_d h2{
-    font-size: 2.5rem;
-}
+  }
+  
+  .vantagem-texto h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .vantagem-texto p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* RESPONSIVO */
+  @media (max-width: 768px) {
+    .vantagem-item {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    /* Aqui forçamos a ordem no mobile */
+    .vantagem-item img.vantagem-img {
+      order: 0; /* Imagem primeiro */
+    }
+  
+    .vantagem-item .vantagem-texto {
+      order: 1; /* Depois título + texto */
+    }
+    
+    .vantagem-img {
+      max-width: 200px; /* imagem menor no mobile */
+    }
+  }
+  

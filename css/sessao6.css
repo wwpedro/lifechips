@@ -1,26 +1,75 @@
-.sessao6 {
-    height: 92vh; 
+.contato {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 100px 20px 60px;
+  }
+  
+  .contato-titulo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e42320;
+    margin-bottom: 60px;
+    font-family: Potato;
+  }
+  
+  .contato-icones {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: rgba(235, 37, 29, 1); 
-    flex-direction: column;
-}
-
-#card_6 {
-    width: 50%; 
-    height: 30%; 
-    background-color: #FFFFFF; 
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    margin-top: 10%;
-}
-
-#card_6 img{
-    margin-right: 2rem;
-    margin-left: 2rem;
-    width: 100px;
-}
+    gap: 80px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .icone-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icone-item img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .icone-item p {
+    font-size: 1rem;
+    color: #d90000;
+    font-weight: bold;
+  }
+  
+  .icone-item a {
+    text-decoration: underline;
+    color: #d90000;
+  }
+  
+  .botao-whatsapp {
+    background-color: #e42320;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  /* Rodapé */
+  .rodape {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .contato-icones {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  

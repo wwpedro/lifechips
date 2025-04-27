@@ -1,74 +1,115 @@
-.sessao4 {
-    height: 120%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5%;
-    flex-direction: column;
-}
-
-.sessao4 .titulo_sessao h1{
-    color: red;
-    margin-bottom: 20%;
-}
-
-#card_4 {
-    width: 70%; 
-    height: 70%; 
-    background-color: rgba(235, 37, 29, 1); 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    
-}
-
-#img_4{
-    margin-top: -150px;
-}
-
-#img_4 img{
-    max-width: 300px; 
-    
-}
-
-#texto_card_4{
-    justify-content: center;
-    align-items: center;
-    color: #FFFFFF;
-    padding: 20px 30px; 
+.receitas {
+    background-color: #fff;
+    color: #d90000;
     text-align: center;
-}
-
-.titulo_4{
-    font-size: 30px;
-    color: #FFFFFF;
-}
-
-.ingredientes{
-    color: #FFFFFF;
-    width: 75%;
-}
-
-.linha4{
+    padding: 100px 20px;
+  }
+  
+  .receitas-titulo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+    line-height: 1.2;
+    font-family: Potato;
+  }
+  
+  .receitas-container {
     display: flex;
-    flex-direction: row;
-    width: 75%;
-}
-
-.imagemlud{
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+  }
+  
+  .card-receita {
+    background-color: #e42320;
+    color: white;
+    padding: 60px 40px 40px;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 547px; /* Largura fixa no desktop */
+    height: 547px; /* Altura fixa no desktop */
+    text-align: center;
+  }
+  
+  .imagem-topo {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100px;
+  }
+  
+  .conteudo-receita h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .ingredientes, .modo-preparo {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .ingredientes p, .modo-preparo p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .modo-preparo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .texto-preparo {
+    flex: 1;
+  }
+  
+  .imagem-preparo {
+    max-width: 80px;
+    height: auto;
+  }
+  
+  .seta {
+    background-color: white;
+    color: #d90000;
+    border: 2px solid #d90000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
     display: flex;
     justify-content: center;
-}
-
-.imagemlud img{
-    width: 200px;
-    position:absolute;
-}
-
-.preparo{
-    width: 100%;
-    color: #FFFFFF;
-    margin-top: 5%;
-}
+    align-items: center;
+  }
+  
+  /* RESPONSIVO */
+  @media (max-width: 768px) {
+    .receitas-container {
+      flex-direction: row; /* Mantém lado a lado */
+    }
+  
+    .card-receita {
+      width: 100%;
+      max-width: 400px;
+      height: auto; /* No mobile altura livre */
+    }
+  
+    .modo-preparo {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .imagem-topo {
+      max-width: 80px;
+    }
+  
+    .imagem-preparo {
+      display: none; /* Some imagem de guacamole */
+    }
+  }
+  
