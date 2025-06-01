@@ -1,19 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     height: 100%;
     flex-direction: column;
     font-family: Poppin;
+    scroll-behavior: smooth;
 }
 
 @font-face {
     font-family: Poppin;
     src: url(../assets/fonts/Poppins-Regular.ttf);
 }
+
 @font-face {
     font-family: Potato;
     src: url(../assets/fonts/Potato_sans-Bold.otf);

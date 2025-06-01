@@ -1,115 +1,125 @@
 .receitas {
-    background-color: #fff;
-    color: #d90000;
-    text-align: center;
-    padding: 100px 20px;
-  }
-  
-  .receitas-titulo {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 60px;
-    line-height: 1.2;
-    font-family: Potato;
-  }
-  
+  background-color: #fff;
+  color: #d90000;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.receitas-titulo {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+  line-height: 1.2;
+  font-family: Potato;
+}
+
+.receitas-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+}
+
+.card-receita {
+  background-color: #e42320;
+  color: white;
+  padding: 60px 40px 40px;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 547px;
+  /* Largura fixa no desktop */
+  height: 547px;
+  /* Altura fixa no desktop */
+  text-align: center;
+}
+
+.imagem-topo {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 150px;
+}
+
+.conteudo-receita h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.ingredientes,
+.modo-preparo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.ingredientes p,
+.modo-preparo p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.modo-preparo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.texto-preparo {
+  flex: 1;
+}
+
+.imagem-preparo {
+  max-width: 150px;
+  height: auto;
+}
+
+.seta {
+  background-color: white;
+  color: #d90000;
+  border: 2px solid #d90000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
   .receitas-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    position: relative;
+    flex-direction: row;
+    /* Mantém lado a lado */
   }
-  
+
   .card-receita {
-    background-color: #e42320;
-    color: white;
-    padding: 60px 40px 40px;
-    border-radius: 30px;
-    position: relative;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    width: 547px; /* Largura fixa no desktop */
-    height: 547px; /* Altura fixa no desktop */
-    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    /* No mobile altura livre */
   }
-  
+
+  .modo-preparo {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .imagem-topo {
     position: absolute;
-    top: -40px;
+    top: -60px;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 100px;
+    max-width: 110px;
   }
-  
-  .conteudo-receita h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
-  .ingredientes, .modo-preparo {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-  
-  .ingredientes p, .modo-preparo p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  
-  .modo-preparo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .texto-preparo {
-    flex: 1;
-  }
-  
+
   .imagem-preparo {
-    max-width: 80px;
-    height: auto;
+    display: none;
+    /* Some imagem de guacamole */
   }
-  
-  .seta {
-    background-color: white;
-    color: #d90000;
-    border: 2px solid #d90000;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* RESPONSIVO */
-  @media (max-width: 768px) {
-    .receitas-container {
-      flex-direction: row; /* Mantém lado a lado */
-    }
-  
-    .card-receita {
-      width: 100%;
-      max-width: 400px;
-      height: auto; /* No mobile altura livre */
-    }
-  
-    .modo-preparo {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .imagem-topo {
-      max-width: 80px;
-    }
-  
-    .imagem-preparo {
-      display: none; /* Some imagem de guacamole */
-    }
-  }
-  
+}

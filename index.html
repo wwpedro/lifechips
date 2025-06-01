@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/all.css">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <title>Document</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <title>C'Life</title>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     <nav>
       <ul id="nav-links">
         <li><a href="#home">home</a></li>
-        <li><a href="#produto">produto</a></li>
+        <li><a href="#produto">produtos</a></li>
         <li><a href="#sobre">sobre</a></li>
         <li><a href="#contato">contato</a></li>
       </ul>
@@ -29,7 +30,9 @@
   <section class="hero" id="home" data-aos="fade-up">
     <div class="hero-text" data-aos="fade-right">
       <h1>Felicidade<br>em cada<br>mordida.</h1>
-      <button>Compre com a gente</button>
+      <a href="https://api.whatsapp.com/send?phone=5582988716997" class="botao-whatsapp" target="_blank">
+        Compre com a gente
+      </a>
     </div>
     <div class="hero-image" data-aos="fade-left">
       <img src="assets/logo_vermelha.png" alt="Life Chips Logo" class="logo">
@@ -39,25 +42,24 @@
 
 
   <section class="produto" id="produto" data-aos="fade-up">
-    <h2 class="produto-titulo">PRODUTO</h2>
+    <h2 class="produto-titulo">PRODUTOS</h2>
 
     <div class="carrossel-container">
-      <button class="seta esquerda" onclick="trocarSlide(-1)">◀</button>
 
       <div class="grade-produto">
         <!-- Linha 1 -->
-        <div class="texto topo-esquerda">As batatas são uma fonte de carboidratos, que são a principal fonte de energia
-          para o corpo. Portanto, as batatas fritas podem fornecer um impulso rápido de energia.</div>
+        <div class="texto topo-esquerda">A batata doce é rica em carboidratos complexos, fornecendo energia de forma
+          equilibrada ao longo do dia.</div>
         <img src="assets/cima.png" class="seta-img seta-topo-esquerda" alt="Seta para cima">
 
 
-        <div class="texto topo-direita">As batatas contêm fibra, que é importante para a saúde digestiva e pode ajudar a
-          manter a saciedade.</div>
+        <div class="texto topo-direita">Contém fibras que auxiliam na digestão e promovem maior saciedade entre as
+          refeições.</div>
 
         <!-- Linha 2 (Produto ao centro) -->
         <div></div>
-        <div class="texto baixo-esquerda">As batatas fritas comerciais muitas vezes contêm altas quantidades de sal e
-          aditivos para melhorar o sabor e prolongar a vida útil.</div>
+        <div class="texto baixo-esquerda">Temperada com sal rosa, páprica e especiarias naturais, combina sabor marcante
+          com nutrição.</div>
         <div class="meio-esquerda"><img src="assets/esquerda.png" class="seta-img seta-baixo-esquerda"
             alt="Seta para direita"></div>
         <div class="produto-imagem">
@@ -70,13 +72,77 @@
         <!-- Linha 3 -->
 
         <div></div> <!-- Espaço vazio -->
-        <div class="texto baixo-direita">As batatas contêm vitamina C e potássio, que são nutrientes essenciais para o
-          sistema imunológico e a saúde cardiovascular. No entanto, o processo de fritura pode reduzir a quantidade de
-          vitamina C.</div> <!-- Espaço vazio -->
+        <div class="texto baixo-direita">Fonte de vitamina A e antioxidantes, ajuda na saúde da pele e fortalecimento do
+          sistema imunológico.</div> <!-- Espaço vazio -->
+        <img src="assets/baixo.png" class="seta-img seta-baixo-direita" alt="Seta para direita">
+      </div>
+      <div class="grade-produto">
+        <!-- Linha 1 -->
+        <div class="texto topo-esquerda">A banana é naturalmente doce e rica em potássio, importante para a saúde
+          muscular e cardiovascular.</div>
+        <img src="assets/cima.png" class="seta-img seta-topo-esquerda" alt="Seta para cima">
+
+
+        <div class="texto topo-direita">A canela adiciona um toque especial, contribuindo para o controle glicêmico e
+          metabolismo.</div>
+
+        <!-- Linha 2 (Produto ao centro) -->
+        <div></div>
+        <div class="texto baixo-esquerda">Um snack crocante e nutritivo para quem quer matar a vontade de doce sem
+          culpa.</div>
+        <div class="meio-esquerda"><img src="assets/esquerda.png" class="seta-img seta-baixo-esquerda"
+            alt="Seta para direita"></div>
+        <div class="produto-imagem">
+          <img src="assets/produto_2.png" alt="Pacote Life Chips">
+        </div>
+        <div class="meio-direita">
+          <img src="assets/direita.png" class="seta-img seta-topo-direita" alt="Seta para cima">
+        </div>
+
+        <!-- Linha 3 -->
+
+        <div></div> <!-- Espaço vazio -->
+        <div class="texto baixo-direita">Ideal para consumir como sobremesa ou lanche, sem conservantes, sem glúten e
+          sem lactose.</div> <!-- Espaço vazio -->
+        <img src="assets/baixo.png" class="seta-img seta-baixo-direita" alt="Seta para direita">
+      </div>
+      <div class="grade-produto">
+        <!-- Linha 1 -->
+        <div class="texto topo-esquerda">Uma alternativa salgada e saudável aos snacks industrializados tradicionais.
+        </div>
+        <img src="assets/cima.png" class="seta-img seta-topo-esquerda" alt="Seta para cima">
+
+
+        <div class="texto topo-direita">A banana verde mantém fibras e amido resistente,<p>que auxiliam na saúde
+            intestinal.</div>
+
+        <!-- Linha 2 (Produto ao centro) -->
+        <div></div>
+        <div class="texto baixo-esquerda">A páprica defumada traz um sabor intenso e diferenciado, <p>perfeito para quem
+            gosta de um toque especial.</div>
+        <div class="meio-esquerda"><img src="assets/esquerda.png" class="seta-img seta-baixo-esquerda"
+            alt="Seta para direita"></div>
+        <div class="produto-imagem">
+          <img src="assets/produto_3.png" alt="Pacote Life Chips">
+        </div>
+        <div class="meio-direita">
+          <img src="assets/direita.png" class="seta-img seta-topo-direita" alt="Seta para cima">
+        </div>
+
+        <!-- Linha 3 -->
+
+        <div></div> <!-- Espaço vazio -->
+        <div class="texto baixo-direita">Sem adição de açúcar, sem conservantes e com um toque artesanal que faz toda a
+          diferença.</div> <!-- Espaço vazio -->
         <img src="assets/baixo.png" class="seta-img seta-baixo-direita" alt="Seta para direita">
       </div>
 
-      <button class="seta direita" onclick="trocarSlide(1)">▶</button>
+
+    </div>
+    <div class="carrossel-indicadores">
+      <div class="indicador" onclick="irParaSlide(0)"></div>
+      <div class="indicador" onclick="irParaSlide(1)"></div>
+      <div class="indicador" onclick="irParaSlide(2)"></div>
     </div>
   </section>
 
@@ -86,20 +152,20 @@
   <section class="vantagens" id="vantagens" data-aos="fade-up">
     <h2 class="vantagens-titulo">VANTAGENS</h2>
 
-    <div class="vantagem-item" data-aos="fade-right">
+    <div class="vantagem-item" data-aos="fade-up">
       <img src="assets/chef.png" alt="Imagem Artesanal" class="vantagem-img">
       <div class="vantagem-texto">
         <h3>ARTESANAL</h3>
-        <p>As batatas fritas comerciais muitas vezes contêm altas quantidades de sal e aditivos para melhorar o sabor e
-          prolongar a vida útil.</p>
+        <p>Nossos chips são feitos com cuidado, em pequenos lotes, sem processos industriais. Isso garante mais sabor,
+          qualidade e autenticidade em cada mordida.</p>
       </div>
     </div>
 
-    <div class="vantagem-item" data-aos="fade-left">
+    <div class="vantagem-item" data-aos="fade-up">
       <div class="vantagem-texto">
         <h3>ESPECIAL</h3>
-        <p>As batatas fritas comerciais muitas vezes contêm altas quantidades de sal e aditivos para melhorar o sabor e
-          prolongar a vida útil.</p>
+        <p>Utilizamos ingredientes naturais, sem aditivos químicos, corantes ou conservantes artificiais. É saúde e
+          sabor real, como deve ser.</p>
       </div>
       <img src="assets/batata.png" alt="Imagem Especial" class="vantagem-img">
     </div>
@@ -107,7 +173,7 @@
 
 
   <section class="receitas" id="receitas" data-aos="fade-up">
-    <h2 class="receitas-titulo">VAI BEM COM<br> LIFECHIPS</h2>
+    <h2 class="receitas-titulo">VAI BEM COM<br> C'LIFE</h2>
 
     <div class="receitas-container" data-aos="zoom-in">
       <button class="seta seta-esquerda" onclick="trocarReceita(-1)">&#9664;</button>
@@ -145,10 +211,10 @@
 
   <section class="sobre" id="sobre" data-aos="fade-up">
     <div class="card-sobre" data-aos="zoom-in">
-      <img src="assets/logo_vermelha.png" alt="Logo LifeChips" class="logo-sobre">
+      <img src="assets/logo_vermelha.png" alt="Logo C'Life" class="logo-sobre">
 
       <p class="texto-sobre">
-        A Lifechips é uma empresa que busca oferecer produtos saborosos e saudáveis, produzidos de forma artesanal com
+        A C'Life é uma empresa que busca oferecer produtos saborosos e saudáveis, produzidos de forma artesanal com
         ingredientes de alta qualidade. O foco é oferecer aos consumidores uma opção de lanche prático e rápido, sem
         abrir mão do sabor e da qualidade.
       </p>
@@ -161,29 +227,30 @@
 
     <div class="contato-icones" data-aos="fade-up">
       <div class="icone-item">
-        <img src="assets/instagram.png" alt="Instagram">
-        <p>@instagram</p>
+        <a href="https://www.instagram.com/c.life.al/">
+          <img src="assets/instagram.png" alt="Instagram">
+          <p>@c.life.al</p>
+        </a>
       </div>
       <div class="icone-item">
-        <img src="assets/gmail.png" alt="Email">
-        <p><a href="mailto:email@gmail.com">email@gmail.com</a></p>
-      </div>
-      <div class="icone-item">
-        <img src="assets/wpp.png" alt="Whatsapp">
-        <p>(82) 900000000</p>
+        <a href="https://api.whatsapp.com/send?phone=5582988716997" target="_blank">
+          <img src="assets/wpp.png" alt="Whatsapp">
+          <p>(82) 9 8871-6997</p>
+        </a>
       </div>
     </div>
 
-    <a href="https://api.whatsapp.com/send?phone=5582900000000" class="botao-whatsapp" target="_blank">
+    <a href="https://api.whatsapp.com/send?phone=5582988716997" class="botao-whatsapp" target="_blank">
       fale com a gente
     </a>
   </section>
 
   <footer class="rodape">
-    <p>© 2024 LifeChips. Todos os direitos reservados.</p>
+    <p>© 2025 C'Life. Todos os direitos reservados.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> <!-- animações -->
+
   <script>
     function toggleMenu() {
       const navLinks = document.getElementById('nav-links');
@@ -200,7 +267,8 @@
         });
       });
     });
-  </script> <!-- hamburguer -->
+  </script><!-- hamburguer -->
+
   <script>
     const receitas = [
       {
@@ -246,11 +314,28 @@
       once: true
     });
   </script>
+
   <script>
     const produtos = [
       // aqui viria cada produto
       {
         imagem: 'assets/produto_1.png',
+        textos: [
+          "Texto 1: energia",
+          "Texto 2: saciedade",
+          "Texto 3: vitamina C e potássio",
+          "Texto 4: sódio e conservantes"
+        ],
+
+        imagem: 'assets/produto_2.png',
+        textos: [
+          "Texto 1: energia",
+          "Texto 2: saciedade",
+          "Texto 3: vitamina C e potássio",
+          "Texto 4: sódio e conservantes"
+        ],
+
+        imagem: 'assets/produto_3.png',
         textos: [
           "Texto 1: energia",
           "Texto 2: saciedade",
@@ -275,6 +360,81 @@
     // Executa quando carregar
     document.addEventListener('DOMContentLoaded', verificarSetas);
   </script>
+
+  <script>
+    const slides = document.querySelectorAll('.grade-produto');
+    const indicadores = document.querySelectorAll('.indicador');
+    let slideAtual = 0;
+    let intervalo;
+
+    function mostrarSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'grid' : 'none';
+      });
+
+      indicadores.forEach((indicador, i) => {
+        indicador.classList.toggle('ativo', i === index);
+      });
+
+      slideAtual = index;
+    }
+
+    function trocarSlide(direcao) {
+      let novo = slideAtual + direcao;
+      if (novo < 0) novo = slides.length - 1;
+      if (novo >= slides.length) novo = 0;
+      mostrarSlide(novo);
+    }
+
+    function iniciarAutoSlide() {
+      intervalo = setInterval(() => trocarSlide(1), 5000);
+    }
+
+    function pararAutoSlide() {
+      clearInterval(intervalo);
+    }
+
+    // Inicializa
+    document.addEventListener('DOMContentLoaded', () => {
+      mostrarSlide(slideAtual);
+      iniciarAutoSlide();
+
+      // Clique nos indicadores
+      indicadores.forEach((indicador, i) => {
+        indicador.addEventListener('click', () => {
+          mostrarSlide(i);
+          pararAutoSlide();
+          iniciarAutoSlide();
+        });
+      });
+
+      // Swipe para mobile
+      let startX = 0;
+      let endX = 0;
+
+      const container = document.querySelector('.carrossel-container');
+
+      container.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+        pararAutoSlide();
+      });
+
+      container.addEventListener('touchend', e => {
+        endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+
+        if (diff > 50) {
+          trocarSlide(1); // arrastou para esquerda
+        } else if (diff < -50) {
+          trocarSlide(-1); // arrastou para direita
+        }
+
+        iniciarAutoSlide();
+      });
+    });
+  </script>
+
+
 
 </body>
 

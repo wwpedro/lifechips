@@ -1,64 +1,66 @@
 .vantagens {
-    background-color: #e42320;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-  }
-  
-  .vantagens-titulo {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 60px;
-    font-family: Potato;
-  }
-  
+  background-color: #e42320;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.vantagens-titulo {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+  font-family: Potato;
+}
+
+.vantagem-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.vantagem-img {
+  max-width: 280px;
+  height: auto;
+}
+
+.vantagem-texto {
+  max-width: 400px;
+  text-align: center;
+}
+
+.vantagem-texto h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.vantagem-texto p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
   .vantagem-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 80px;
-  }
-  
-  .vantagem-img {
-    max-width: 250px;
-    height: auto;
-  }
-  
-  .vantagem-texto {
-    max-width: 400px;
+    flex-direction: column;
     text-align: center;
   }
-  
-  .vantagem-texto h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
+
+  /* Aqui forçamos a ordem no mobile */
+  .vantagem-item img.vantagem-img {
+    order: 0;
+    /* Imagem primeiro */
   }
-  
-  .vantagem-texto p {
-    font-size: 1rem;
-    line-height: 1.5;
+
+  .vantagem-item .vantagem-texto {
+    order: 1;
+    /* Depois título + texto */
   }
-  
-  /* RESPONSIVO */
-  @media (max-width: 768px) {
-    .vantagem-item {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    /* Aqui forçamos a ordem no mobile */
-    .vantagem-item img.vantagem-img {
-      order: 0; /* Imagem primeiro */
-    }
-  
-    .vantagem-item .vantagem-texto {
-      order: 1; /* Depois título + texto */
-    }
-    
-    .vantagem-img {
-      max-width: 200px; /* imagem menor no mobile */
-    }
+
+  .vantagem-img {
+    max-width: 200px;
+    /* imagem menor no mobile */
   }
-  
+}

@@ -20,10 +20,14 @@
   justify-content: center;
   position: relative;
   width: 100%;
-  max-width: 1200px; /* mesma largura máxima que a grade */
-  margin: 0 auto; /* centraliza */
-  padding: 0 20px; /* espaço lateral em qualquer tela */
-  box-sizing: border-box; /* evita estouro */
+  max-width: 1200px;
+  /* mesma largura máxima que a grade */
+  margin: 0 auto;
+  /* centraliza */
+  padding: 0 20px;
+  /* espaço lateral em qualquer tela */
+  box-sizing: border-box;
+  /* evita estouro */
 }
 
 
@@ -37,13 +41,20 @@
   align-items: center;
   justify-items: center;
   position: relative;
+
+  /* Transição suave */
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
 }
+
 
 /* Produto Centralizado */
 .produto-imagem {
   grid-column: 2 / span 2;
   grid-row: 2;
 }
+
 .produto-imagem img {
   max-width: 270px;
   height: auto;
@@ -63,26 +74,31 @@
   display: flex;
   margin-left: 180px;
 }
+
 .topo-direita {
   grid-column: 4;
   grid-row: 1;
   margin-top: 100px;
   margin-right: 200px;
 }
+
 .meio-esquerda {
   grid-column: 1;
   grid-row: 2;
   margin-left: 350px;
   margin-top: 250px;
 }
+
 .meio-direita {
   grid-column: 4;
   grid-row: 2;
 }
+
 .baixo-direita {
   margin-right: 150px;
 }
-.baixo-esquerda{
+
+.baixo-esquerda {
   margin-left: 160px;
 }
 
@@ -91,6 +107,7 @@
   width: 70px;
   height: auto;
 }
+
 .seta-topo-esquerda {
   grid-column: 2;
   grid-row: 1;
@@ -98,16 +115,19 @@
   margin-top: 50px;
 
 }
+
 .seta-topo-direita {
   grid-column: 3;
   grid-row: 1;
   margin-right: 380px;
   margin-bottom: 150px;
 }
+
 .seta-baixo-esquerda {
   grid-column: 2;
   grid-row: 3;
 }
+
 .seta-baixo-direita {
   grid-column: 3;
   grid-row: 3;
@@ -150,25 +170,30 @@
 @media (max-width: 1136px) {
   .carrossel-container {
     flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
+    align-items: center;
+    position: relative;
   }
 
   .grade-produto {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Espaço entre os elementos */
-    margin-top: -300px;
+    gap: 0;
+    margin: 0 auto;
   }
 
   /* Produto aparece primeiro */
   .produto-imagem {
-    order: 0;
-    margin-bottom: 10px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .produto-imagem img {
+    margin: 0 auto;
+    display: block;
+    max-width: 250px;
   }
 
   /* Esconde todas as setas padrão */
@@ -176,17 +201,18 @@
     display: none;
   }
 
+  .seta {
+    display: none !important;
+  }
+
+  .produto-imagem {
+    order: 0;
+    margin: 0 auto;
+  }
+
   /* Cria UMA seta nova abaixo do produto */
   .produto-imagem::after {
-    content: "";
-    display: block;
-    background-image: url('../assets/baixo-centro.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 100px;
-    height: 100px;
-    margin: 20px auto 0 auto;
+    display: none;
   }
 
   /* Textos aparecem em coluna */
@@ -197,13 +223,54 @@
     margin: 0 auto 20px auto;
   }
 
-  /* Remove margens extras */
+  .texto,
   .topo-esquerda,
   .topo-direita,
   .meio-esquerda,
   .meio-direita,
   .baixo-direita,
   .baixo-esquerda {
-    margin-bottom: 15px;
+    display: none;
   }
+
+  .carrossel-indicadores {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    order: 2;
+    /* Garante que venha depois do produto */
+  }
+
+  .grade-produto {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .produto-imagem {
+    margin-bottom: 20px;
+  }
+}
+
+.carrossel-indicadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  position: relative;
+  order: 2;
+}
+
+.carrossel-indicadores .indicador {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carrossel-indicadores .indicador.ativo {
+  background-color: #d90000;
 }
